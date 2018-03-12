@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+  <user>
+    <name>Farzana Faruque</name>
+    <username>farzana</username>
+    <password>farz123</password>
+    <type>author</type>
+  </user>
+  <user>
+    <name>Sahidul Islam</name>
+    <username>sahidul</username>
+    <password>test123</password>
+    <type>author</type>
+  </user>
+</users>
