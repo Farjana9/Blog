@@ -6,10 +6,4 @@
     <password>farz123</password>
     <type>author</type>
   </user>
-  <user>
-    <name>Sahidul Islam</name>
-    <username>sahidul</username>
-    <password>test123</password>
-    <type>author</type>
-  </user>
 </users>

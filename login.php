@@ -6,7 +6,7 @@
         if (!is_null($user) && $_POST['password'] == (string)$user->password) {
             $_SESSION['name'] = (string)$user->name;
             $_SESSION['username'] = (string)$user->username;
-            header('Location: /');
+            header('Location: index.php');
         } else {
             $msg = 'Invalid username or password.';
         }
