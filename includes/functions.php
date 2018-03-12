@@ -79,7 +79,7 @@ function redirect_if_not_logged_in() {
 }
 
 function open_from_xml_file($filename) {
-    $xml = simplexml_load_file(__DIR__ . '/../data/' . $filename) or die('Error: Cannot create object');
+    $xml = simplexml_load_file(__DIR__ . '/../data/' . $filename);
     return $xml;
 }
 
