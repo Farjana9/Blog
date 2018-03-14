@@ -2,7 +2,7 @@
 session_start();
 
 function get_blogs() {
-    $blogs = open_from_xml_file('blogs.xml');
+    $blogs = open_xml_file('blogs.xml');
     return $blogs;
 }
 
@@ -34,7 +34,7 @@ function save_blog_post($id, $title, $content) {
     $post_to_save->title = $title;
     $post_to_save->content = $content;
 
-    save_xml_to_file($blogs, 'blogs.xml');
+    save_xml_file($blogs, 'blogs.xml');
     return $post_to_save['id'];
 }
 
@@ -46,11 +46,11 @@ function add_new_user($name, $username, $password) {
     $new_user->addChild('password', $password);
     $new_user->addChild('type', 'author');
 
-    save_xml_to_file($users, 'users.xml');
+    save_xml_file($users, 'users.xml');
 }
 
 function get_users() {
-    $users = open_from_xml_file('users.xml');
+    $users = open_xml_file('users.xml');
     return $users;
 }
 
@@ -74,12 +74,12 @@ function redirect_if_not_logged_in() {
     }
 }
 
-function open_from_xml_file($filename) {
+function open_xml_file($filename) {
     $xml = simplexml_load_file($filename);
     return $xml;
 }
 
-function save_xml_to_file($xml, $filename) {
+function save_xml_file($xml, $filename) {
     $dom = new DOMDocument('1.0');
     $dom->preserveWhiteSpace = false;
     $dom->formatOutput = true;
