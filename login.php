@@ -29,7 +29,7 @@
         <!-- Blog Entries Column -->
         <div class="col-md-8 offset-md-2">
             <form method="post" action="<?=htmlspecialchars($_SERVER['PHP_SELF'])?>">
-                <h1>Singn In</h1>
+                <h1>Sign In</h1>
                 <hr />
                 <div class="form-group">
                     <label for="username">User Name</label>
