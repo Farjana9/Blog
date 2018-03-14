@@ -1,4 +1,4 @@
-<?php require_once('includes/functions.php'); ?>
+<?php require_once('functions.php'); ?>
 <?php
     if (isset($_POST['login']) && !empty($_POST['username']) && !empty($_POST['password'])) {
         $msg = '';

@@ -1,4 +1,4 @@
-<?php require_once('includes/functions.php'); ?>
+<?php require_once('functions.php'); ?>
 <?php
     if (isset($_POST['signup']) && !empty($_POST['name']) && !empty($_POST['username']) && !empty($_POST['password'])) {
         add_new_user($_POST['name'], $_POST['username'], $_POST['password']);

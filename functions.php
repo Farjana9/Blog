@@ -1,10 +1,6 @@
 <?php
 session_start();
 
-// for displaying error
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 function get_blogs() {
     $blogs = open_from_xml_file('blogs.xml');
     return $blogs;
@@ -79,7 +75,7 @@ function redirect_if_not_logged_in() {
 }
 
 function open_from_xml_file($filename) {
-    $xml = simplexml_load_file(__DIR__ . '/../data/' . $filename);
+    $xml = simplexml_load_file($filename);
     return $xml;
 }
 
@@ -88,7 +84,7 @@ function save_xml_to_file($xml, $filename) {
     $dom->preserveWhiteSpace = false;
     $dom->formatOutput = true;
     $dom->loadXML($xml->asXML());
-    $dom->save(__DIR__ . '/../data/' . $filename);
+    $dom->save($filename);
 }
 
 ?>

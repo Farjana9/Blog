@@ -1,4 +1,4 @@
-<?php require_once('includes/functions.php'); ?>
+<?php require_once('functions.php'); ?>
 <?php
     $blogs = get_blogs();
 ?>
